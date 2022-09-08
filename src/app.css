@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{        
+        --red: hsl(0, 100%, 66%);
+        --white: hsl(0, 0%, 100%);
+        --light-grayish-violet: hsl(270, 3%, 87%);
+        --dark-grayish-violet: hsl(279, 6%, 55%);
+        --very-dark-violet: hsl(278, 68%, 11%);
+    }     
+    *{
+  
+    }
+}
+
+@layer components{
+    html{
+        @apply font-Space 
+    }  
+    body{
+        @apply bg-mobile 
+        bg-[length:100vw]
+        lg:bg-desktop lg:bg-[length:35vw_100vh]
+        bg-no-repeat       
+    }
+    .main{
+        @apply w-screen h-screen 
+        flex 
+        flex-col
+        lg:flex-row
+        lg:justify-center 
+        lg:items-center         
+    }
+    .cards{
+        @apply flex
+        p-4
+        w-full
+        h-1/3
+        lg:w-1/4
+        lg:h-full
+        flex-col-reverse
+        lg:flex-col
+        lg:items-center
+        lg:justify-center
+        lg:space-y-4
+        
+        relative
+    }
+    .card-front{
+        @apply z-10                 
+        bg-contain
+        bg-no-repeat
+        w-[80vw]
+        md:w-[75vw]
+        h-[42vw]
+        absolute
+        top-[calc(90%/2)]
+        md:top-[58%]
+        lg:static
+        lg:w-[27.93rem] 
+        lg:h-[15.31rem]         
+        flex 
+        flex-col 
+        justify-between 
+        bg-card-front 
+        lg:-ml-16
+        p-6 
+        uppercase
+        text-white              
+    }
+    .card-back{
+        @apply         
+        absolute                
+        w-[80vw]
+        h-[42vw]
+        top-2
+        right-1        
+        bg-contain
+        bg-no-repeat
+        lg:static
+        lg:w-[27.93rem] 
+        lg:h-[15.31rem] 
+        bg-card-back 
+        flex 
+        items-center 
+        justify-end 
+        pr-14 
+        uppercase 
+        text-white
+    }
+    .form{
+        @apply w-full 
+        flex
+        flex-col
+        p-5                      
+        space-y-3
+        mt-11
+        md:mt-44
+        lg:p-3         
+        lg:w-1/3        
+        lg:p-5
+        lg:space-y-6
+        lg:ml-24        
+        lg:mt-0        
+    }
+    .form-group{
+        @apply flex flex-col
+    }
+    .form-inline{
+        @apply flex 
+    }
+    .form-input{
+        @apply border-2 border-gray-400 p-2 rounded-md
+    }
+    .form-input.error{
+        @apply border-2 border-red
+    }
+    .btn{
+        @apply w-full p-4 rounded-lg shadow-md
+    }
+    .btn-primary{
+        @apply bg-very-dark-violet text-white hover:bg-dark-grayish-violet
+    }
+    .footer{
+        @apply w-full text-center absolute bottom-0 
+    }
+    .link{
+        @apply text-very-dark-violet 
+    }
+    .card_confirm{
+        @apply w-full flex flex-col justify-center items-center space-y-8
+    }   
+    .card_confirm img{
+        @apply w-24
+    }
+    .card_confirm h2{
+        @apply text-2xl text-very-dark-violet
+    }
+    .card_confirm span{
+        @apply text-lg text-dark-grayish-violet
+    }
+}
