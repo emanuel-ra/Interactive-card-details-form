@@ -141,4 +141,7 @@
     .card_confirm span{
         @apply text-lg text-dark-grayish-violet
     }
+    .error__message{
+        @apply text-lg text-red
+    }
 }

@@ -14,4 +14,30 @@ const number_card_format = (value) => {
         return value
     }
 }
-export {number_card_format};
+const valid  = {
+    card_number: value =>{
+        let reg_exp = new RegExp(/\d{4,16}/g);
+        if(!reg_exp.test(value)){           
+            return false;
+        }
+        return true;
+    },
+    only_number: value => {
+        let reg_exp = new RegExp(/^\d+$/);
+        if(!reg_exp.test(value)){
+            return false;
+        }
+        return true;
+    },
+}
+const serialize = formElement => {
+    const values = {};
+    const inputs = formElement.elements;
+    for (let i = 0; i < inputs.length-1; i++) {        
+        values[inputs[i].name] = inputs[i].value;
+    }
+    return values;
+}
+
+
+export {valid,number_card_format,serialize};

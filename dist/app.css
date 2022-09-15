@@ -799,12 +799,22 @@ body {
   color: var(--dark-grayish-violet);
 }
 
+.error__message {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--red);
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .w-\[10rem\] {
